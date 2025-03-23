@@ -4,20 +4,20 @@ import { extractorAttributify, transformerClass } from "unocss-preset-weapp/tran
 const { presetWeappAttributify, transformerAttributify } = extractorAttributify();
 
 export default {
-  "presets": [
+  presets: [
     // https://github.com/MellowCo/unocss-preset-weapp
     presetWeapp(),
     // attributify autocomplete
     presetWeappAttributify(),
   ],
-  "shortcuts": [
+  shortcuts: [
     {
       "flex-center": "flex justify-center items-center",
       "flex-col": "flex flex-col",
     },
   ],
 
-  "transformers": [
+  transformers: [
     // https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerAttributify
     transformerAttributify(),
 

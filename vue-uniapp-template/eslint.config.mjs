@@ -22,6 +22,9 @@ export default [
         ...globals.browser ,
         ...globals.node,
         ...autoImportConfig.globals, // 自动导入的全局变量
+        ...{
+          uni: "readonly", // uni-app 全局对象
+        },
       }
     }
   }, // 浏览器/Node环境全局变量
@@ -47,7 +50,7 @@ export default [
   {
     rules: {
       quotes: ["error", "double"], // 强制使用双引号
-      "quote-props": ["error", "always"], // 强制对象的属性名使用引号
+      "quote-props": ["error", "as-needed"], // 强制对象的属性名使用引号
       semi: ["error", "always"], // 要求使用分号
       indent: ["error", 2], // 使用两个空格进行缩进
       "no-multiple-empty-lines": ["error", { max: 1 }], // 不允许多个空行
@@ -64,6 +67,7 @@ export default [
       "vue/multi-word-component-names": "off", // 关闭多单词组件名称的限制
       "vue/html-indent": ["error", 2], // Vue 模板中的 HTML 缩进使用两个空格
       "vue/no-v-html": "off", // 允许使用 v-html (根据实际项目需要)
+      'vue/quote-props': ['error', 'as-needed'] // 
     },
   },
 ];

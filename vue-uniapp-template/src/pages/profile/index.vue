@@ -11,5 +11,6 @@ const title = ref("我的");
 
 onMounted(() => {
   console.log("onMounted");
+  console.log(import.meta.env.VITE_APP_PORT);
 });
 </script>

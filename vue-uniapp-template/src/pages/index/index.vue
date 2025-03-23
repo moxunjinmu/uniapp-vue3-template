@@ -2,7 +2,7 @@
   <view class="flex-center flex-col">
     <image class="logo" src="/static/logo.png" />
     <view class="text-area">
-      <text class=" text-red text-xl font-bold">{{ title }}</text>
+      <text class="text-red text-xl font-bold">{{ title }}</text>
     </view>
   </view>
 </template>

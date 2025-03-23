@@ -7,7 +7,6 @@ onShow(() => {
   console.log("App Show");
 });
 onHide(() => {
-  const name = "moxunjinmu";
   console.log("App Hide");
 });
 </script>

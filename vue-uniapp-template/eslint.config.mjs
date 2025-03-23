@@ -2,10 +2,29 @@ import globals from "globals"; // 全局变量配置
 import pluginJs from "@eslint/js"; // JavaScript 的推荐配置
 import tseslint from "typescript-eslint"; // TypeScript 配置
 import pluginVue from "eslint-plugin-vue"; // Vue 配置
+import { readFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, resolve } from "path";
+
+// 动态读取 .eslintrc-auto-import.json 文件内容
+const autoImportConfig = JSON.parse(
+  readFileSync(
+    resolve(dirname(fileURLToPath(import.meta.url)), ".eslintrc-auto-import.json"),
+    "utf-8",
+  ),
+);
 
 export default [
   {files: ["**/*.{js,mjs,cjs,ts,vue}"]}, // 校验的文件类型
-  {languageOptions: { globals: {...globals.browser , ...globals.node} }}, // 浏览器/Node环境全局变量
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser ,
+        ...globals.node,
+        ...autoImportConfig.globals, // 自动导入的全局变量
+      }
+    }
+  }, // 浏览器/Node环境全局变量
   pluginJs.configs.recommended, // JavaScript 推荐配置
   ...tseslint.configs.recommended, // TypeScript 推荐配置
   ...pluginVue.configs["flat/essential"], // Vue 推荐配置

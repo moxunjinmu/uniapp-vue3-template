@@ -1,1 +1,3 @@
 echo "Running pre-commit hook..."
+pnpm run lint:lint-staged
+echo "pre-commit end"

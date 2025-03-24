@@ -1,11 +1,25 @@
-import { defineConfig } from "vite";
+import { defineConfig, UserConfig, ConfigEnv, loadEnv } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
 import AutoImport from "unplugin-auto-import/vite";
 
-export default defineConfig(async () => {
+export default defineConfig(async ({ mode }: ConfigEnv): Promise<UserConfig> => {
   const UnoCss = await import("unocss/vite").then(i => i.default);
+  const env = loadEnv(mode, process.cwd());
 
   return {
+    server: {
+      host: "0.0.0.0",
+      port: +env.VITE_APP_PORT,
+      open: true,
+      // 反向代理配置
+      proxy: {
+        [env.VITE_APP_BASE_API]: {
+          target: env.VITE_APP_API_URL, // 目标服务器
+          changeOrigin: true,           // 支持跨域
+          rewrite: (path) => path.replace(new RegExp("^" + env.VITE_APP_BASE_API), ""), // 去掉前缀
+        },
+      },
+    },
     plugins: [
       uni(),
       // 配置 UnoCSS

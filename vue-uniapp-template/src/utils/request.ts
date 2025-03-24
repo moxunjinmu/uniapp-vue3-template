@@ -5,8 +5,8 @@ export default function request<T>(options: UniApp.RequestOptions): Promise<T> {
   return new Promise((resolve, reject) => {
     uni.request({
       ...options,
-      // VITE_APP_API_URL 是在 Vite 项目的 .env.development 文件中配置的环境变量，表示 API 的路径
-      url: `${import.meta.env.VITE_APP_API_URL}${options.url}`,
+      // VITE_APP_BASE_API 是在 Vite 项目的 .env.development 文件中配置的环境变量，使用代理标识，实际转发到真实 API
+      url: `${import.meta.env.VITE_APP_BASE_API}${options.url}`, // 示例: http://localhost:5173/dev-api/login
       header: {
         ...options.header,
         Authorization: token,

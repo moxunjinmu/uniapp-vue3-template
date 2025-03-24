@@ -20,7 +20,7 @@ const userStore = useUserStore();
 const handleLogin = async () => {
   await userStore.login(username.value, password.value);
 
-  if (!!userStore.token) {
+  if (userStore.token) {
     await userStore.getUserInfo(); // 登录成功后获取用户信息
     uni.showToast({ title: "登录成功", icon: "success" });
     uni.navigateBack(); // 登录成功后返回上一页

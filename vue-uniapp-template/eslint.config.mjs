@@ -56,9 +56,8 @@ export default [
       "no-multiple-empty-lines": ["error", { max: 1 }], // 不允许多个空行
       "no-trailing-spaces": "error", // 不允许行尾有空格
       // 精细化控制：允许双否，但禁止其他冗余转换（如 Boolean(variable)）
-      "no-extra-boolean-cast": ["error", { 
-        "allowWithTernary": true,   // 允许在条件表达式中使用双否
-        "enforceForLogicalOperands": false // 不检查逻辑操作符中的布尔转换
+      "no-extra-boolean-cast": ["error", {
+        "enforceForInnerExpressions": false // 不检查逻辑操作符中的布尔转换
       }],
 
       // TypeScript 规则

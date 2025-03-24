@@ -1,8 +1,3 @@
-/*
- * @Author: moxunjingmu
- * @Date: 2025-03-24 16:39:18
- * @Description:
- */
 module.exports = {
   // 继承的规则
   extends: ["@commitlint/config-conventional"],

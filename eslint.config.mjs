@@ -53,7 +53,9 @@ export default [
       quotes: ["error", "double"], // 强制使用双引号
       "quote-props": ["error", "as-needed"], // 强制对象的属性名使用引号
       semi: ["error", "always"], // 要求使用分号
-      indent: ["error", 2], // 使用两个空格进行缩进
+      indent: ["error", 2, { 
+        "SwitchCase": 1  // 为switch case语句设置缩进级别，1表示额外缩进一级
+      }], // 使用两个空格进行缩进
       "no-multiple-empty-lines": ["error", { max: 1 }], // 不允许多个空行
       "no-trailing-spaces": "error", // 不允许行尾有空格
       // 精细化控制：允许双否，但禁止其他冗余转换（如 Boolean(variable)）

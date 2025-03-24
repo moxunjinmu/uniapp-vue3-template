@@ -1,41 +1,18 @@
 <template>
-  <view class="flex-center flex-col">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
-      <text class="text-red text-xl font-bold">{{ title }}</text>
+  <view class="flex flex-col items-center justify-center p-30rpx">
+    <image class="h-200rpx w-200rpx mt-100rpx mx-auto mb-50rpx" src="/static/logo.png" />
+    <view class="flex justify-center mb-80rpx">
+      <text class="text-36rpx text-gray-500">{{ title }}</text>
+    </view>
+    <view class="w-full flex flex-col items-center">
+      <text class="text-32rpx font-bold text-gray-800 mb-10rpx">每日心情记录</text>
+      <text class="text-24rpx text-gray-500 mb-30rpx">追踪你的情绪变化，培养积极心态</text>
+      <MoodTracker></MoodTracker>
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-const title = ref("Hello");
+const title = ref("UniApp 模板应用");
 </script>
-
-<style>
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
-
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
-</style>

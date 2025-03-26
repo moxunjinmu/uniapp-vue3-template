@@ -57,6 +57,7 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-4030620241128001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4030620241128001",
     "pinia": "^3.0.1",
+    "uview-plus": "^3.4.8",
     "vue": "^3.4.21",
     "vue-i18n": "^9.1.9"
   },
@@ -102,11 +103,9 @@
     ],
     "*.{vue,html}": [
       "eslint --fix",
-      "prettier --write",
-      "stylelint --fix"
+      "prettier --write"
     ],
     "*.{scss,css}": [
-      "stylelint --fix",
       "prettier --write"
     ],
     "*.md": [

@@ -1,0 +1,12 @@
+
+# 通用规则
+* text=auto eol=lf
+
+# Windows特殊文件
+*.{cmd,bat,ps1,[cC][mM][dD]} text eol=crlf
+
+# Shell脚本
+*.{sh,bash} text eol=lf
+
+# 二进制文件黑名单
+*.{png,jpg,jpeg,webp,gif,ico,exe,dll,zip,rar,7z,gif,zip,ttf,woff,woff2} binary

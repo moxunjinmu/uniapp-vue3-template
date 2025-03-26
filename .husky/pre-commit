@@ -1,3 +1,8 @@
 echo "Running pre-commit hook..."
 pnpm run lint:lint-staged
+if git diff --cached --name-only | xargs grep -m 1 -I $'\r'
+then
+  echo "CR字符检测失败！请执行换行符规范化"
+  exit 1
+fi
 echo "pre-commit end"

@@ -10,7 +10,11 @@
       <text class="text-36rpx text-gray-500">{{ title }}</text>
     </view>
     <view>
-      <u-button type="primary">测试按钮</u-button>
+      <wd-button size="small">主要按钮</wd-button>
+      <wd-button type="success" size="small">成功按钮</wd-button>
+      <wd-button type="info" size="small">信息按钮</wd-button>
+      <wd-button type="warning" size="small">警告按钮</wd-button>
+      <wd-button type="error" size="small">危险按钮</wd-button>
     </view>
     <view class="w-full flex flex-col items-center">
       <text class="text-32rpx font-bold text-gray-800 mb-10rpx">每日心情记录</text>

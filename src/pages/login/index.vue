@@ -1,3 +1,8 @@
+<!--
+ * @Author: moxunjinmu
+ * @Date: 2025-03-24 17:39:53
+ * @Description:
+-->
 <template>
   <view class="flex-col items-center">
     <input v-model="username" placeholder="请输入用户名" />

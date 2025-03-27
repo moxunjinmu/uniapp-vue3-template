@@ -4,6 +4,16 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Vue](https://img.shields.io/badge/Vue-3.x-brightgreen.svg) ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg) ![Vite](https://img.shields.io/badge/Vite-4.x-646cff.svg) ![uni-app](https://img.shields.io/badge/uni--app-3.x-green.svg) ![UnoCSS](https://img.shields.io/badge/UnoCSS-latest-8D66FE.svg) ![Pinia](https://img.shields.io/badge/Pinia-latest-yellow.svg) ![ESLint](https://img.shields.io/badge/ESLint-9.x-4B32C3.svg) ![Prettier](https://img.shields.io/badge/Prettier-3.x-F7B93E.svg) ![Sass](https://img.shields.io/badge/Sass-latest-CC6699.svg)
 
+## 分支介绍
+
+**master分支**：包含除了uview-plus组件库的所有分支
+
+**dev2.0-Wot**：包含了wot-design-uni ，没有css格式化功能
+
+**dev2.0-Wot-stylelint**: 包含了wot-design-uni 和css格式化
+
+**dev2.0-uviewPlus**: 包含了uview-plus组件库，没有css格式化功能
+
 ## 特性
 
 - 🚀 Vue 3 + TypeScript + Vite + UnoCSS 技术栈
@@ -182,6 +192,14 @@ const data = await request<ResponseType>({
 ```html
 <!-- 示例用法，无需导入 -->
 <custom-component></custom-component>
+```
+
+## sass警告解决
+
+不想项目出现sass弃用警告可以降级sass版本
+
+```shell
+npm install sass@1.32.13 --save-dev
 ```
 
 ## 许可证

@@ -144,6 +144,45 @@ pnpm lint
 git commit -m "feat: 添加用户登录功能"
 ```
 
+使用 pnpm commit 选项式提交
+
+```shell
+pnpm commit
+```
+
+效果：
+
+```shell
+
+? 选择你要提交的类型 : 文档:     📝  文档变更
+? 选择一个提交范围（可选）: custom
+? 请输入自定义的提交范围 : README.md
+? 填写简短精炼的变更描述 :
+ [Infinity more chars allowed]
+ 修改分支描述
+? 填写更加详细的变更描述（可选）。使用 "|" 换行 :
+
+? 选择关联issue前缀（可选）: skip
+
+###--------------------------------------------------------###
+docs(README.md): :memo: 修改分支描述
+###--------------------------------------------------------###
+
+? 是否提交或修改commit ? Yes
+Running pre-commit hook...
+
+> uni-preset-vue@0.0.0 lint:lint-staged D:\700-code\750-Gitee\uniapp-vue3-template
+> lint-staged
+
+✔ Backed up original state in git stash (0c08b10)
+✔ Running tasks for staged files...
+✔ Applying modifications from tasks...
+✔ Cleaning up temporary files...
+pre-commit end
+[dev/dev2.0-Wot-stylelint 9ac9226] docs(README.md): :memo: 修改分支描述
+ 1 file changed, 18 insertions(+)
+```
+
 ## UnoCSS 集成
 
 项目集成了 UnoCSS 提供原子化 CSS 解决方案：
